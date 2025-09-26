@@ -14,6 +14,7 @@ exception_types = ['无', '分发失败', '审批异常']
 
 # 生成近30天分钟级数据
 dates = pd.date_range(datetime.datetime.now() - datetime.timedelta(days=30), periods=30*24*60, freq='T')
+dates = pd.date_range(datetime.datetime.now() - datetime.timedelta(days=7), periods=7*24*60, freq='T')
 mock_data = []
 for dt in dates:
     platform = np.random.choice(platforms)
